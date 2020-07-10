@@ -1,6 +1,7 @@
 <h2>Products</h2>
 
-<!-- vjp -->  
+<!-- vjp -->
+<!-- generation of products list -->
 <div *ngFor="let product of products">
   <h3>
     <a [title]="product.name + ' details'">
@@ -9,6 +10,13 @@
     <p *ngIf="product.description">
       Description: {{ product.description}}
     </p>
+<!--button for sharing -->
+    <button (click)="share()">
+      Share
+    </button>
+<!--button for tracking -->
+    <app-product-alerts [product]="product">
+    </app-product-alerts>
   </h3>
 </div>
 
