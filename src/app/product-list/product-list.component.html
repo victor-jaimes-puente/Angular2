@@ -2,9 +2,10 @@
 
 <!-- vjp -->
 <!-- generation of products list -->
-<div *ngFor="let product of products">
+<div *ngFor="let product of products; index as productId">
   <h3>
-    <a [title]="product.name + ' details'">
+<!--added router link -->
+    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
     {{product.name}}
     </a>
     <p *ngIf="product.description">
