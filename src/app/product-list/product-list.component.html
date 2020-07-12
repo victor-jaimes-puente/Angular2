@@ -3,7 +3,7 @@
 <!-- vjp -->
 <!--generated productId based on *ngFor of products-->
 <div *ngFor="let product of products; index as productId">
-  <h3>
+  <h1>
 <!--added router link -->
     <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
     {{product.name}}
@@ -11,6 +11,7 @@
     <p *ngIf="product.description">
       Description: {{ product.description}}
     </p>
+      <br>
 <!--button for sharing -->
     <button (click)="share()">
       Share
@@ -20,7 +21,7 @@
             [product]="product"
             (notify)="onNotify()">
     </app-product-alerts>
-  </h3>
+  </h1>
 </div>
 
 <!-- 
