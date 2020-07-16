@@ -9,14 +9,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
-import { Js101Component } from './js101/js101.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: Js101Component },
       { path: 'products/:productId', component: ProductDetailsComponent },
       {path: 'cart', component: CartComponent},
     ])
@@ -28,7 +26,6 @@ import { Js101Component } from './js101/js101.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    Js101Component
   ],
   bootstrap: [ AppComponent ]
 })
